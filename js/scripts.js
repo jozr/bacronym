@@ -27,13 +27,14 @@ var wiseBacronyms = function(phrase) {
                     "y":"Yearn for peace",
                     "z":"Zealously support a worthy cause"
                     };
-  var letterArray = phrase.split('');
+  var letters = phrase.split('');
   var result = [];
 
-    for (var index = 0; index < letterArray.length; index++) {
-      result.push(dictionary[letterArray[index]]);
-    };
-  return result.join(', ');
+for (var index = 0; index < letters.length; index++) {
+  result.push(dictionary[letters[index]]);
+};
+
+  return result.join(' ');
 };
 
 $(document).ready(function() {
